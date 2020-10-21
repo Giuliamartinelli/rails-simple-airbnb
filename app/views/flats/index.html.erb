@@ -1,0 +1,16 @@
+<h1>Fake AF airbnb</h1>
+<%= link_to "New flat", new_flat_path %>
+<div class="card">
+<ul>
+<% @flats.each do |flat| %>
+<li><%= flat.name %></li>
+<li><%= flat.description %></li>
+<li><%= flat.address %></li>
+<li><i class="fas fa-euro-sign"></i><%= flat.price_per_night%></li>
+<li><i class="fas fa-snowman"></i><%= flat.number_of_guests%></li>
+<%= link_to "More info", flat %>
+<% end %>
+</ul>
+</div>
+
+
