@@ -1,16 +1,16 @@
 <h1>Fake AF airbnb</h1>
-<%= link_to "New flat", new_flat_path %>
-<div class="card">
-<ul>
+<%= link_to "New flat", new_flat_path, class: "btn btn-primary"%>
 <% @flats.each do |flat| %>
-<li><%= flat.name %></li>
-<li><%= flat.description %></li>
-<li><%= flat.address %></li>
-<li><i class="fas fa-euro-sign"></i><%= flat.price_per_night%></li>
-<li><i class="fas fa-snowman"></i><%= flat.number_of_guests%></li>
-<%= link_to "More info", flat %>
-<% end %>
-</ul>
+<div class="card" style="width: 18rem;">
+  <img src="https://picsum.photos/200/150" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= flat.name %></h5>
+    <p class="card-text"><%= flat.description %></p>
+    <i class="fas fa-euro-sign"></i><%= flat.price_per_night%>
+    <i class="fas fa-snowman"></i><%= flat.number_of_guests%>
+    <%= link_to "more info", flat, class: "btn btn-primary" %></a>
+    <% end %>
+  </div>
 </div>
 
 
